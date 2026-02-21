@@ -8,7 +8,7 @@ This project includes:
 
 - **Frontend**: React + TypeScript + Vite + React Router + Tailwind CSS v4
 - **UI behavior**: UGX formatting, loan calculations (20%/30 days), role checks
-- **Storage mode**: local browser storage only (no external backend integration)
+- **Storage mode**: local browser storage only (fully offline/local data)
 - **Vercel hosting config**: `vercel.json` for SPA routing + build output
 
 ---
