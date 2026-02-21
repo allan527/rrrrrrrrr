@@ -7,7 +7,8 @@ Personal Loan Management Dashboard for internal operations in Uganda.
 This project includes:
 
 - **Frontend**: React + TypeScript + Vite + React Router + Tailwind CSS v4
-- **UI behavior**: UGX formatting, loan calculations (20%/30 days), role checks, local data mode
+- **UI behavior**: UGX formatting, loan calculations (20%/30 days), role checks
+- **Storage mode**: local browser storage only (no external backend integration)
 - **Vercel hosting config**: `vercel.json` for SPA routing + build output
 
 ---
@@ -31,14 +32,10 @@ Copy `.env.example` to `.env` and update values.
 cp .env.example .env
 ```
 
-Important frontend variables:
+Frontend variables:
 
 - `VITE_APP_NAME` – UI title text
 - `VITE_OWNER_EMAIL` – owner account used for owner-only UI gates
-- `VITE_DATA_MODE` – `local` (localStorage demo) or `remote` (API-backed)
-- `VITE_API_BASE_URL` – API base URL for remote mode
-
-If you enable a remote backend, configure its variables in that backend environment.
 
 ---
 
@@ -66,19 +63,7 @@ The included `vercel.json` ensures SPA route fallback to `index.html`.
 
 ---
 
-## 4) Production note
-
-Current frontend logic defaults to **local mode** (`localStorage`) to make quick demos easy.
-For production hosting, set:
-
-- `VITE_DATA_MODE=remote`
-- `VITE_API_BASE_URL=<your deployed API base>`
-
-and wire data calls to your deployed API backend.
-
----
-
-## 5) Core business rules implemented
+## 4) Core business rules implemented
 
 - UGX formatting (`UGX 1,000,000` style)
 - 20% monthly interest (`totalPayable = principal * 1.2`)

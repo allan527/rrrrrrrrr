@@ -15,5 +15,5 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["src", "supabase/functions/server"]
+  "include": ["src"]
 }
