@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #0f172a;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+}
+
+.card-glass {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.82);
+}
